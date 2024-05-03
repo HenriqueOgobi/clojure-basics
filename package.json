@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "install-clojure": "^0.0.0"
+  }
+}
