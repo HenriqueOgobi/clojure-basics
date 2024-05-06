@@ -6,7 +6,10 @@
 ; Aprendi tbm que posso usa update e uma função pra somar ou subtrair.
 ; Aprendi a usar o map, ele mapeia no sentido matematico da coisa, então ele vai mapear e aplicar alguma função em algum iterável.
 ; Aprendi a usar o filter, que diferante do map que só pega todos os valores e aplica, o filter mapeia e filtra em quais valores voce quer aplicar.
+; Aprendi a usar o reduce, ele reduz todos os elementos em um só ex: ela pode somar tudo, fazer media e etc.
 ; Aprendi que usar even? quer dizer se é par?
+;
+;
 
 (def precos [30, 100 , 700, 800, 900])
 
@@ -58,3 +61,13 @@
 (println "Filter em quais valores vao ter desconto no array:" (filter aplica-desconto? precos))
 (println "map após o filter" (map valor-descontado (filter aplica-desconto? precos)))
 
+;mapeando a função e fazendo reduce. 
+(println "total dos preços:" (reduce + precos))
+
+(defn soma-de-array
+  [valor-1 valor-2]
+  (println "somando:" valor-1 valor-2)
+  (+ valor-1 valor-2))
+(println (reduce soma-de-array precos))
+(println (reduce soma-de-array 0 precos))
+(println (reduce soma-de-array (range 10)))
