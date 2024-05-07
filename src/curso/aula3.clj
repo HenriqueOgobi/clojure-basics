@@ -14,10 +14,10 @@
 
 (def estoqueKeyWords {:Mochila, 15, :Camiseta, 15})
 (println "As chaves são" (keys estoqueKeyWords))
-(assoc estoqueKeyWords :Cadeira, 10 );localmente
+(assoc estoqueKeyWords :Cadeira, 10);localmente
 (def estoqueKeyWords (assoc estoqueKeyWords :Cadeira, 10)); alterou o simbolo
-(println(assoc estoqueKeyWords :Mochila, 10));local 
-(println(update estoqueKeyWords :Mochila inc)); relembrando o update que relaciona a uma função
+(println (assoc estoqueKeyWords :Mochila, 10));local 
+(println (update estoqueKeyWords :Mochila inc)); relembrando o update que relaciona a uma função
 (defn tira-um
   [valor]
   (println "função que tira um")
@@ -51,6 +51,6 @@
 
 ;outra maneira de navegadar pra dentro é o threading.
 ;essa é a maneira mais tradicional pra entrar nos codigos aninhados, usando THREADING.
-(println(-> pedido
-    :mochila
-    :quantidade))
+(println (-> pedido
+             :mochila
+             :quantidade))
